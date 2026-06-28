@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>💖 Candidature Officielle 💖</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>💖 Candidature Officielle 💖</h1>
+
+        <p>Merci de remplir ce formulaire avec le plus grand sérieux 😌</p>
+
+        <div class="gallery">
+            <img src="images/photo1.jpg">
+            <img src="images/photo2.jpg">
+            <img src="images/photo3.jpg">
+            <img src="images/photo4.jpg">
+        </div>
+
+        <form id="form">
+
+            <section>
+
+                <h2>👤 Informations</h2>
+
+                <input id="nom" type="text" placeholder="Nom" required>
+
+                <input id="prenom" type="text" placeholder="Prénom" required>
+
+                <input id="age" type="number" placeholder="Âge">
+
+                <input id="taille" type="number" placeholder="Taille (cm)">
+
+                <input id="origines" type="text" placeholder="Origines">
+
+            </section>
+
+            <section>
+
+                <h2>💕 Ce que tu aimes chez les mecs</h2>
+
+                <textarea id="aime_mecs" placeholder="Exemple : drôle, gentil, ambitieux, fidèle..."></textarea>
+
+            </section>
+
+            <section>
+
+                <h2>🎯 Tes passions</h2>
+
+                <div class="options">
+
+                    <label><input type="checkbox"> Voyager</label>
+                    <label><input type="checkbox"> Netflix</label>
+                    <label><input type="checkbox"> Cuisine</label>
+                    <label><input type="checkbox"> Shopping</label>
+                    <label><input type="checkbox"> Jeux vidéo</label>
+                    <label><input type="checkbox"> Musique</label>
+                    <label><input type="checkbox"> Lire</label>
+
+                </div>
+
+            </section>
+
+            <section>
+
+                <h2>🏋️ Fais-tu du sport ?</h2>
+
+                <div class="options">
+
+                    <label>
+                        <input type="radio" name="sport" value="Oui">
+                        Oui
+                    </label>
+
+                    <label>
+                        <input type="radio" name="sport" value="Non">
+                        Non
+                    </label>
+
+                </div>
+
+            </section>
+
+            <section>
+
+                <h2>🎲 Aimes-tu les soirées jeux ?</h2>
+
+                <div class="options">
+
+                    <label>
+                        <input type="radio" name="jeux" value="Oui">
+                        Oui
+                    </label>
+
+                    <label>
+                        <input type="radio" name="jeux" value="Non">
+                        Non
+                    </label>
+
+                </div>
+
+            </section>
+
+            <section>
+
+                <h2>📺 Série préférée</h2>
+
+                <input id="serie" type="text" placeholder="Ex : Stranger Things">
+
+            </section>
+
+            <section>
+
+                <h2>🎬 Film préféré</h2>
+
+                <input id="film" type="text" placeholder="Ex : Interstellar">
+
+            </section>
+
+            <section>
+
+                <h2>🐶 Animal préféré</h2>
+
+                <div class="options">
+
+                    <label><input type="checkbox">🐶 Chien</label>
+                    <label><input type="checkbox">🐱 Chat</label>
+                    <label><input type="checkbox">🐰 Lapin</label>
+                    <label><input type="checkbox">🐹 Hamster</label>
+                    <label><input type="checkbox">🙅 Aucun</label>
+
+                </div>
+
+            </section>
+
+            <section>
+
+                <h2>🚬 Tu fumes ?</h2>
+
+                <div class="options">
+
+                    <label>
+                        <input type="radio" name="fume">
+                        Oui
+                    </label>
+
+                    <label>
+                        <input type="radio" name="fume">
+                        Non
+                    </label>
+
+                    <label>
+                        <input type="radio" name="fume">
+                        Occasionnellement
+                    </label>
+
+                </div>
+
+            </section>
+
+            <section>
+
+                <h2>🍷 Tu bois ?</h2>
+
+                <div class="options">
+
+                    <label>
+                        <input type="radio" name="bois">
+                        Oui
+                    </label>
+
+                    <label>
+                        <input type="radio" name="bois">
+                        Non
+                    </label>
+
+                    <label>
+                        <input type="radio" name="bois">
+                        En soirée
+                    </label>
+
+                </div>
+
+            </section>
+
+            <section>
+
+                <h2>⭐ Tes qualités</h2>
+
+                <textarea id="qualites" placeholder="Tes qualités"></textarea>
+
+                <h2>😈 Tes défauts</h2>
+
+                <textarea id="defauts" placeholder="Tes défauts"></textarea>
+
+                <h2>💬 Pourquoi devrais-tu être retenue ?</h2>
+
+                <textarea id="commentaire" placeholder="Convaincs-nous..."></textarea>
+
+            </section>
+
+            <button type="submit">
+                🚀 Envoyer ma candidature
+            </button>
+
+        </form>
+
+        <div id="resultat"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

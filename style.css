@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(-45deg, #ff6b6b, #6c63ff, #4ecdc4, #ffd93d);
+    background-size: 400% 400%;
+    animation: bg 12s ease infinite;
+}
+
+@keyframes bg {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle, #ffffff55 2px, transparent 2px);
+    background-size: 60px 60px;
+    animation: move 20s linear infinite;
+}
+
+@keyframes move {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-60px);
+    }
+}
+
+.container {
+
+    width: 900px;
+    max-width: 100%;
+
+    background: rgba(255, 255, 255, .18);
+    backdrop-filter: blur(18px);
+
+    border-radius: 30px;
+
+    padding: 40px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .35);
+
+    animation: appear .7s;
+
+}
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+h1 {
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 42px;
+
+    margin-bottom: 10px;
+
+}
+
+p {
+
+    color: white;
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+h2 {
+
+    color: white;
+
+    margin: 30px 0 15px;
+
+    font-size: 22px;
+
+}
+
+.gallery {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 35px;
+
+}
+
+.gallery img {
+
+    width: 100%;
+
+    height: 240px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    transition: .4s;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .35);
+
+}
+
+.gallery img:hover {
+
+    transform: scale(1.04) rotate(2deg);
+
+}
+
+input,
+textarea {
+
+    width: 100%;
+
+    border: none;
+
+    padding: 16px;
+
+    border-radius: 16px;
+
+    margin: 10px 0;
+
+    font-size: 15px;
+
+    transition: .3s;
+
+}
+
+textarea {
+
+    resize: vertical;
+
+    min-height: 120px;
+
+}
+
+input:focus,
+textarea:focus {
+
+    outline: none;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 0 20px rgba(255, 255, 255, .8);
+
+}
+
+.options {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+}
+
+.options label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: white;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, .18);
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.options label:hover {
+
+    background: rgba(255, 255, 255, .35);
+
+    transform: translateX(6px);
+
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+
+    width: auto;
+
+    transform: scale(1.2);
+
+}
+
+button {
+
+    width: 100%;
+
+    margin-top: 40px;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 18px;
+
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+button:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 15px 40px rgba(255, 75, 43, .45);
+
+}
+
+#resultat {
+
+    margin-top: 30px;
+
+    text-align: center;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    line-height: 1.6;
+
+    animation: fade .5s;
+
+}
+
+@keyframes fade {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+section {
+
+    margin-bottom: 25px;
+
+}
+
+@media(max-width:750px) {
+
+    .container {
+
+        padding: 25px;
+
+    }
+
+    .gallery {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .options {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    h1 {
+
+        font-size: 30px;
+
+    }
+
+}
